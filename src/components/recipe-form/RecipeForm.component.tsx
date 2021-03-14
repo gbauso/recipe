@@ -84,6 +84,7 @@ const RecipeForm: React.FC = () => {
         ingredients,
         steps,
         id: uuidv4() as string,
+        dateAdded: new Date(),
       };
       addRecipe(recipe);
       history.push('/');

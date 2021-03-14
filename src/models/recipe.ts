@@ -1,6 +1,6 @@
 type Recipe = {
   id: string;
-  dateAdded?: Date;
+  dateAdded: Date;
   name: string;
   ingredients: Ingredient[];
   steps: Step[];
