@@ -5,7 +5,7 @@ import { hot } from 'react-hot-loader';
 import Routes from './Routes';
 import store from './store/store';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { lightTheme } from './themes/light.theme';
+import lightTheme from './themes/light.theme';
 
 const GlobalStyle = createGlobalStyle`
   * {
