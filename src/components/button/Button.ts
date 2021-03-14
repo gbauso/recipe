@@ -8,8 +8,13 @@ const Button = styled.button`
   font-size: 14px;
   font-weight: ${({ theme }) => theme.font.weight.bold};
 
-  &:hover {
+  &:hover:not([disabled]) {
     transform: scale(1.1);
+  }
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.color.lightGray};
+    cursor: not-allowed;
   }
 `;
 
