@@ -6,6 +6,12 @@ import RecipeCard from '../card/RecipeCard.component';
 
 const Wrapper = styled.div``;
 
+const NoRecipesText = styled.h1`
+  text-align: center;
+  font-size: 24px;
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+`;
+
 const RecipeList: React.FC = () => {
   const { recipes } = useRecipe();
   const history = useHistory();
@@ -19,9 +25,13 @@ const RecipeList: React.FC = () => {
 
   return (
     <Wrapper>
-      {recipes.map((recipe, index) => (
-        <RecipeCard {...recipe} key={index} onClick={handleClick} />
-      ))}
+      {recipes.length > 0 ? (
+        recipes.map((recipe, index) => (
+          <RecipeCard {...recipe} key={index} onClick={handleClick} />
+        ))
+      ) : (
+        <NoRecipesText>No recipes so far...</NoRecipesText>
+      )}
     </Wrapper>
   );
 };
