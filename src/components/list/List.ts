@@ -4,7 +4,7 @@ const List = styled.ul`
   padding: 8px;
 `;
 
-const ListItem = styled.li`
+const ListItem = styled.li.attrs({ 'data-testId': 'list-item' })`
   font-size: 14px;
   font-weight: ${({ theme }) => theme.font.weight.bold};
   list-style: square;

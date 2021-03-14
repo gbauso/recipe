@@ -1,0 +1,20 @@
+{
+  "name": "cypress",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cypress": "^5.6.0"
+  },
+  "scripts": {
+    "start": "cypress run"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

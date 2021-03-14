@@ -1,0 +1,7 @@
+{
+  "testFiles": "**/*.feature",
+  "defaultCommandTimeout": 60000,
+  "env": {
+    "baseUrl": "http://localhost:4200"
+  }
+}

@@ -47,7 +47,7 @@ const ButtonWrapper = styled.div`
   align-self: flex-end;
 `;
 
-const AddButton = styled(Button)`
+const AddButton = styled(Button).attrs({ 'data-testId': 'add-button' })`
   &::before {
     content: '+';
   }
@@ -61,7 +61,7 @@ const SubmitWrapper = styled.div`
   justify-content: center;
 `;
 
-const Submit = styled(Button)`
+const Submit = styled(Button).attrs({ 'data-testId': 'submit' })`
   padding: 8px;
 `;
 
@@ -126,6 +126,7 @@ const RecipeForm: React.FC = () => {
             value={name}
             variant="normal"
             placeholder="Name"
+            id="name"
           />
         </InputWrapper>
         <InputGroup>
@@ -136,6 +137,7 @@ const RecipeForm: React.FC = () => {
               value={ingredient}
               variant="normal"
               placeholder="Ingredient"
+              id="ingredient"
             />
           </InputWrapper>
           <ButtonWrapper>
@@ -160,6 +162,7 @@ const RecipeForm: React.FC = () => {
               value={step}
               variant="normal"
               placeholder="Step"
+              id="step"
             />
           </InputWrapper>
           <ButtonWrapper>
