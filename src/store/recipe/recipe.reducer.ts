@@ -1,16 +1,7 @@
-import Recipe from '@/models/recipe';
 import { ADD_RECIPE, RecipesState, RecipeTypes } from './recipe.types';
 
-const testRecipe: Recipe = {
-  dateAdded: new Date(),
-  ingredients: [],
-  name: 'Meu Pato',
-  id: 'xy',
-  steps: [],
-};
-
 const initialState: RecipesState = {
-  records: [testRecipe],
+  records: [],
 };
 
 const recipe = (state = initialState, action: RecipeTypes) => {
