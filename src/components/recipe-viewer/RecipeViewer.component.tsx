@@ -1,9 +1,10 @@
 import Recipe from '@/models/recipe';
 import useRecipe from '@/store/recipe/useRecipe.hook';
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { ListItem, List } from '../list/List';
+import { toast } from 'react-toastify';
 
 const Wrapper = styled.div``;
 
@@ -26,10 +27,19 @@ const ListWrapper = styled.div``;
 const RecipeViewer: React.FC = () => {
   const { recipes } = useRecipe();
   const { id } = useParams<{ id: string }>();
+  const history = useHistory();
 
-  const [recipe] = useState<Recipe | undefined>(
-    recipes.find(rec => rec.id === id)
-  );
+  const [recipe, setRecipe] = useState<Recipe>();
+
+  useEffect(() => {
+    const recipe = recipes.find(rec => rec.id === id);
+    if (recipe) {
+      setRecipe(recipe);
+    } else {
+      toast.error('Recipe not Found');
+      history.push('/');
+    }
+  }, [history, id, recipes]);
 
   return (
     <Wrapper>

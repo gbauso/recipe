@@ -7,6 +7,7 @@ import Input from '../input/Input.component';
 import { v4 as uuidv4 } from 'uuid';
 import { useHistory } from 'react-router';
 import { List, ListItem } from '../list/List';
+import { toast } from 'react-toastify';
 
 const Wrapper = styled.div``;
 
@@ -87,6 +88,7 @@ const RecipeForm: React.FC = () => {
         dateAdded: new Date(),
       };
       addRecipe(recipe);
+      toast.success('Recipe added with success');
       history.push('/');
     },
     [addRecipe, history, ingredients, name, steps]

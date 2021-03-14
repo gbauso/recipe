@@ -2,6 +2,9 @@ import React, { FC } from 'react';
 import { Provider } from 'react-redux';
 import { hot } from 'react-hot-loader';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Routes from './Routes';
 import store from './store/store';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
@@ -23,6 +26,7 @@ const App: FC = () => (
   <ThemeProvider theme={lightTheme}>
     <Provider store={store}>
       <GlobalStyle />
+      <ToastContainer />
       <Routes />
     </Provider>
   </ThemeProvider>
