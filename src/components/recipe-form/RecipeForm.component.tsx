@@ -47,7 +47,7 @@ const ButtonWrapper = styled.div`
   align-self: flex-end;
 `;
 
-const AddButton = styled(Button).attrs({ 'data-testId': 'add-button' })`
+const AddButton = styled(Button).attrs({ 'data-testid': 'add-button' })`
   &::before {
     content: '+';
   }
@@ -61,7 +61,7 @@ const SubmitWrapper = styled.div`
   justify-content: center;
 `;
 
-const Submit = styled(Button).attrs({ 'data-testId': 'submit' })`
+const Submit = styled(Button).attrs({ 'data-testid': 'submit' })`
   padding: 8px;
 `;
 

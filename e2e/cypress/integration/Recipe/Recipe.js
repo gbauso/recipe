@@ -23,17 +23,17 @@ And('click on recipe created', function () {
 
 Then('recipe was sucessfully created', function () {
   const recipe = this.recipe;
-  cy.get('[data-testId="recipe-title"]')
+  cy.get('[data-testid="recipe-title"]')
     .contains(recipe.name)
     .should('be.visible');
 
   recipe.ingredients.forEach(ingredient => {
-    cy.get('[data-testId="list-item"]')
+    cy.get('[data-testid="list-item"]')
       .contains(ingredient)
       .should('be.visible');
   });
 
   recipe.steps.forEach(step => {
-    cy.get('[data-testId="list-item"]').contains(step).should('be.visible');
+    cy.get('[data-testid="list-item"]').contains(step).should('be.visible');
   });
 });

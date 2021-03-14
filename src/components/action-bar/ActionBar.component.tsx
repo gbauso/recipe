@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 
-const Wrapper = styled.div.attrs({ 'data-testId': 'action-bar' })`
+const Wrapper = styled.div.attrs({ 'data-testid': 'action-bar' })`
   position: fixed;
   display: flex;
   align-items: center;

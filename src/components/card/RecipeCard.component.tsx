@@ -8,7 +8,7 @@ type RecipeCardProps = {
   onClick: (id: string) => void;
 };
 
-const Wrapper = styled(Card).attrs({ 'data-testId': 'recipe-card' })`
+const Wrapper = styled(Card).attrs({ 'data-testid': 'recipe-card' })`
   display: flex;
   align-items: center;
   cursor: pointer;

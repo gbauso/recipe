@@ -7,7 +7,7 @@ import { ListItem, List } from '../list/List';
 
 const Wrapper = styled.div``;
 
-const Title = styled.h1.attrs({ 'data-testId': 'recipe-title' })`
+const Title = styled.h1.attrs({ 'data-testid': 'recipe-title' })`
   text-align: center;
   font-weight: ${({ theme }) => theme.font.weight.bold};
   font-size: 24px;
